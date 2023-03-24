@@ -10,11 +10,11 @@ blueprint:
         entity:
           domain: media_player
     light:
-      name: Light
-      description: Turning this light on will pause playback.
+      name: Switch
+      description: Turning this switch on will pause playback.
       selector:
         entity:
-          domain: light
+          domain: switch
     timeout:
       name: Resume playback timeout
       description: If the light is turned back off within this time, playback will resume.
