@@ -8,7 +8,7 @@ blueprint:
       name: Button
       selector:
         entity:
-          domain: switch
+          domain: zha
   
     target_switch:
       name: Lights
