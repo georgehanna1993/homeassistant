@@ -19,10 +19,8 @@ blueprint:
             domain: switch
 
 trigger:
-  - platform: state
+  - platform: device
     entity_id: !input device
-    from: 'off'
-    to: 'on'
 condition: []
 action:
   - service: switch.turn_on
