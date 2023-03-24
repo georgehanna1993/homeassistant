@@ -8,7 +8,7 @@ blueprint:
       name: Button
       selector:
         entity:
-          domain: sensor
+          domain: binary_sensor
   
     target_switch:
       name: Lights
