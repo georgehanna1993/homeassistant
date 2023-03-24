@@ -1,0 +1,31 @@
+blueprint:
+  name: Turn On Light When I Click Button
+  description: Testing blueprints
+  domain: automation
+  
+  input:
+    device:
+      name: Button
+      selector:
+        entity:
+          domain: sensor
+  
+    target_switch:
+      name: Lights
+      description: The light(s) that will be turned on
+      selector:
+        target:
+          entity:
+            domain: switch
+
+trigger:
+  - platform: state
+    entity_id: !input device
+    from: 'off'
+    to: 'on'
+condition: []
+action:
+  - service: switch.turn_on
+    data: {}
+    entity_id: !input target_switch
+    mode: single
